@@ -4,16 +4,13 @@ class Length{
     }
     
     equalality(thatObj){
-        if(this===thatObj){
-            return true;
-        }
-        if(thatObj==null){
+        if(thatObj===null){
             return false;
         }
-        if(this.value==thatObj.value){
+        if(this===thatObj||(this.value==thatObj.value && typeof this==typeof thatObj)){
             return true;
         }
-        
+        return false;
     }
 
 }
