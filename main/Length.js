@@ -2,8 +2,11 @@ class Length{
     constructor(value){
         this.value=value;
     }
-    giveFeet(){
-        return this.value;
+    
+    equalality(thatObj){
+        if(this.value==thatObj.value){
+            return true;
+        }
     }
 
 }
