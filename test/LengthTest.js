@@ -11,4 +11,9 @@ describe('tests for length conversion',function(){
         zeroFeet=new length(0);
         assert.equal(false,zeroFeet.equalality(null));
     })
+
+    it('given 0 feet object check itself for equality should return false',function(){
+        zeroFeet=new length(0);
+        assert.equal(true,zeroFeet.equalality(zeroFeet));
+    })
 });

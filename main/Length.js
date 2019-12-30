@@ -4,6 +4,9 @@ class Length{
     }
     
     equalality(thatObj){
+        if(this===thatObj){
+            return true;
+        }
         if(thatObj==null){
             return false;
         }
