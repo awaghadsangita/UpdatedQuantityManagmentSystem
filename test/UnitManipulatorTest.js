@@ -100,5 +100,14 @@ describe('test for comparision',()=>{
         }
     });
 
+    it('given undefined as unit type and two objects when compare should throw error',()=>{
+        try{
+            undefinedUnitType1=new unitManipulator(1,undefined);
+            undefinedUnitType2=new unitManipulator(1,undefined);
+            new unitManipulator().compare(undefinedUnitType1,undefinedUnitType2);
+        }catch(e){
+            assert.equal(e.message,'Invalid Unit Type');
+        }
+    });
 });
 
