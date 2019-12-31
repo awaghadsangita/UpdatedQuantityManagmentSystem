@@ -129,4 +129,10 @@ describe("tests for addition of units",()=>{
         oneFeet2=new unitManipulator(1,unit.lengthUnit.FEET);
         assert.equal(new unitManipulator().add(oneFeet1,oneFeet2),24);
     })
+
+    it('two inch should be added with two point five centimeter should return 3 inch',()=>{
+        twoInch=new unitManipulator(2,unit.lengthUnit.INCH);
+        twoPointFiveCentimeter=new unitManipulator(2.5,unit.lengthUnit.CENTIMETER);
+        assert.equal(Math.round(new unitManipulator().add(twoInch,twoPointFiveCentimeter)),3);
+    })
 })
