@@ -34,4 +34,10 @@ describe('tests for length conversion',function(){
         oneInch=new length.Length(1,length.LengthUnit.INCH);
         assert.notEqual(oneFeet.FeetToInch(),oneInch.unitValue);
     })
+
+    it('given 1 inch compare with 1 feet should not equal',function(){
+        oneInch=new length.Length(1,length.LengthUnit.INCH);
+        oneFeet=new length.Length(1,length.LengthUnit.FEET);
+        assert.notEqual(oneInch.unitValue,oneFeet.FeetToInch());
+    })
 });
