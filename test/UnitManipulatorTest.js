@@ -90,7 +90,7 @@ describe('test for comparision',()=>{
         }
     });
 
-    it('given 1 gallon and 1 centimeter when compare should throw error',()=>{
+    it('given null as unit type and two objects when compare should throw error',()=>{
         try{
             nullUnitType1=new unitManipulator(1,null);
             nullUnitType2=new unitManipulator(1,null);
@@ -99,5 +99,6 @@ describe('test for comparision',()=>{
             assert.equal(e.message,'Invalid Unit Type');
         }
     });
+
 });
 
