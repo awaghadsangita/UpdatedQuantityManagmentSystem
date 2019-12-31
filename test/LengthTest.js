@@ -76,4 +76,10 @@ describe('tests for length conversion',function(){
         let threeFeet=new length.Length(3,length.LengthUnit.FEET).unitConversion();
         assert.equal(threeFeet,oneYard);
     })
+
+    it('one yard should be equal to one yard',function(){
+        oneYard=new length.Length(1,length.LengthUnit.YARD);
+        oneYard=new length.Length(1,length.LengthUnit.YARD);
+        assert.equal(true,oneYard.equalality(oneYard));
+    })
 });
