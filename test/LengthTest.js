@@ -54,15 +54,20 @@ describe('tests for length conversion',function(){
     })
 
     it('given 1 feet should not be equal 1 yard',function(){
-        let oneFeet=new length.Length(1,length.Length.FEET).unitConversion();
-        let oneYard=new length.Length(1,length.Length.YARD).unitConversion();
+        let oneFeet=new length.Length(1,length.LengthUnit.FEET).unitConversion();
+        let oneYard=new length.Length(1,length.LengthUnit.YARD).unitConversion();
         assert.notEqual(oneYard,oneFeet);
     })
 
     it('given 1 inch should not be equal 1 yard',function(){
-        let oneInch=new length.Length(1,length.Length.INCH).unitConversion();
-        let oneYard=new length.Length(1,length.Length.YARD).unitConversion();
+        let oneInch=new length.Length(1,length.LengthUnit.INCH).unitConversion();
+        let oneYard=new length.Length(1,length.LengthUnit.YARD).unitConversion();
         assert.notEqual(oneYard,oneInch);
     })
 
+    it('given 1 yard should return 36 inch',function(){
+        let oneYard=new length.Length(1,length.LengthUnit.YARD).unitConversion();
+        let thirtySixInch=new length.Length(36,length.LengthUnit.INCH).unitConversion();
+        assert.equal(thirtySixInch,oneYard);
+    })
 });
