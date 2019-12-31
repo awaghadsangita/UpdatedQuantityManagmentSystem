@@ -88,12 +88,12 @@ describe("tests for addition of units",()=>{
     it('two inch should be added with two inch should return four inch',()=>{
         twoInch=new length.Length(2,length.LengthUnit.INCH);
         twoInch=new length.Length(2,length.LengthUnit.INCH);
-        assert.equal(4,twoInch.add(twoInch));
+        assert.equal(twoInch.add(twoInch),4);
     })
 
     it('two inch should be added with two inch should return four inch',()=>{
         oneFeet=new length.Length(1,length.LengthUnit.FEET);
         twoInch=new length.Length(2,length.LengthUnit.INCH);
-        assert.equal(14,oneFeet.add(twoInch));
+        assert.equal(oneFeet.add(twoInch),14);
     })
 })
