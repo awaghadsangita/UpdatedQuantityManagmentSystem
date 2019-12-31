@@ -1,14 +1,13 @@
-class Unit{
-    LengthUnit={
+const lengthUnit={
         FEET:12,
         INCH:1,
         YARD:36,
         CENTIMETER:0.393701
     }
-    volumeUnit={
+const volumeUnit={
         GALLON:3.78,
         MILILITIRE:0.001,
         LITRE:1
     }
-}
-module.exports=new Unit();
+
+module.exports={lengthUnit,volumeUnit};
