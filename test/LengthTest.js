@@ -52,4 +52,10 @@ describe('tests for length conversion',function(){
         oneYard=new length.Length(1,length.LengthUnit.YARD);
         assert.equal(oneYard.unitConversion(),threeFeet.unitConversion());
     })
+
+    it('given 1 feet should not be equal 1 yard',function(){
+        let oneFeet=new length.Length(1,length.Length.FEET).unitConversion();
+        let oneYard=new length.Length(1,length.Length.YARD).unitConversion();
+        assert.notEqual(oneYard,oneFeet);
+    })
 });
