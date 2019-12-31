@@ -70,4 +70,10 @@ describe('tests for length conversion',function(){
         let thirtySixInch=new length.Length(36,length.LengthUnit.INCH).unitConversion();
         assert.equal(thirtySixInch,oneYard);
     })
+
+    it('given 1 yard should return 3 feet',function(){
+        let oneYard=new length.Length(1,length.LengthUnit.YARD).unitConversion();
+        let threeFeet=new length.Length(3,length.LengthUnit.FEET).unitConversion();
+        assert.equal(threeFeet,oneYard);
+    })
 });
