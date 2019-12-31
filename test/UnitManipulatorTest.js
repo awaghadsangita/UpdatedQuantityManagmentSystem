@@ -112,25 +112,25 @@ describe('test for comparision', () => {
 });
 
 describe("tests for addition of length units",()=>{
-    it('two inch should be added with two inch should return four inch',()=>{
+    it('2 inch added with 2 inch should return 4 inch',()=>{
         twoInch1=new unitManipulator(2,unit.lengthUnit.INCH);
         twoInch2=new unitManipulator(2,unit.lengthUnit.INCH);
         assert.equal(new unitManipulator().add(twoInch1,twoInch2),4);
     });
 
-    it('two inch should be added with two inch should return four inch',()=>{
+    it('2 inch added with 2 inch should return 4 inch',()=>{
         oneFeet=new unitManipulator(1,unit.lengthUnit.FEET);
         twoInch=new unitManipulator(2,unit.lengthUnit.INCH);
         assert.equal(new unitManipulator().add(oneFeet,twoInch),14);
     });
 
-    it('one feet should be added with one feet should return 24 inch',()=>{
+    it('1 feet added with 1 feet should return 24 inch',()=>{
         oneFeet1=new unitManipulator(1,unit.lengthUnit.FEET);
         oneFeet2=new unitManipulator(1,unit.lengthUnit.FEET);
         assert.equal(new unitManipulator().add(oneFeet1,oneFeet2),24);
     })
 
-    it('two inch should be added with two point five centimeter should return 3 inch',()=>{
+    it('2 inch added with 2.5 centimeter should return 3 inch',()=>{
         twoInch=new unitManipulator(2,unit.lengthUnit.INCH);
         twoPointFiveCentimeter=new unitManipulator(2.5,unit.lengthUnit.CENTIMETER);
         assert.equal(Math.round(new unitManipulator().add(twoInch,twoPointFiveCentimeter)),3);
