@@ -101,4 +101,10 @@ describe("tests for addition of units",()=>{
         oneFeet=new length.Length(1,length.LengthUnit.FEET);
         assert.equal(oneFeet.add(oneFeet),24);
     })
+
+    it('two inch should be added with two point five centimeter should return 3 inch',()=>{
+        twoInch=new length.Length(2,length.LengthUnit.INCH);
+        twoPointFiveCentimeter=new length.Length(2.5,length.LengthUnit.CENTIMETER);
+        assert.equal(Math.round(twoInch.add(twoPointFiveCentimeter)),3);
+    })
 })

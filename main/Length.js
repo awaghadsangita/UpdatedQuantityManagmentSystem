@@ -2,7 +2,7 @@ const LengthUnit={
     FEET:12,
     INCH:1,
     YARD:36,
-    CENTIMETER:2.54
+    CENTIMETER:0.393701
 }
 class Length{
     constructor(value,lengthUnit){
