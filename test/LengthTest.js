@@ -96,4 +96,9 @@ describe("tests for addition of units",()=>{
         twoInch=new length.Length(2,length.LengthUnit.INCH);
         assert.equal(oneFeet.add(twoInch),14);
     })
+
+    it('one feet should be added with one feet should return 24 inch',()=>{
+        oneFeet=new length.Length(1,length.LengthUnit.FEET);
+        assert.equal(oneFeet.add(oneFeet),24);
+    })
 })
