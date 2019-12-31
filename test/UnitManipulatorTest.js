@@ -1,5 +1,6 @@
 let assert=require('assert');
 let unit=require('../main/Unit');
+let volume=require('../main/Volume');
 let unitManipulator=require('../main/UnitManipluator');
 
 describe('tests for length conversion',()=>{
@@ -76,5 +77,17 @@ describe('tests for length conversion',()=>{
         let thousandMl=new unitManipulator(1000,unit.volumeUnit.MILILITIRE);
         assert.equal(new unitManipulator().compare(thousandMl,oneLitre),true);
     })
+});
+
+describe('test for comparision',()=>{
+    it('given 1 gallon and 1 centimeter when compare should throw error',()=>{
+        try{
+            oneGallon=new unitManipulator(1,unit.volumeUnit.GALLON);
+            oneCentimer=new unitManipulator(1,unit.lengthUnit.CENTIMETER);
+            new unitManipulator().compare(oneGallon,oneCentimer);
+        }catch(e){
+            assert.equal(e.message,'Invalid Unit Type');
+        }
+    });
 });
 
