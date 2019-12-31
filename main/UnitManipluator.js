@@ -5,6 +5,9 @@ class UnitManipulator{
     }
 
     compare(unitOne,unitTwo){
+        if(unitOne.unitType===null||unitTwo.unitType===null)
+            throw new Error('Invalid Unit Type');
+                
         if(unitOne.unitType.name==unitTwo.unitType.name)
             return unitOne.unitValue*unitOne.unitType.value==unitTwo.unitValue*unitTwo.unitType.value;
             
