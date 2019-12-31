@@ -207,4 +207,14 @@ describe("tests for addition method", () => {
             assert.equal(e.message, 'Invalid Unit');
         }
     });
+
+    it('given null as unit type,two objects when added should throw error', () => {
+        try {
+            nullUnitType1 = new unitManipulator(1, null);
+            nullUnitType2 = new unitManipulator(1, null);
+            new unitManipulator().add(nullUnitType1, nullUnitType2);
+        } catch (e) {
+            assert.equal(e.message, 'Invalid Unit');
+        }
+    });
 });
