@@ -8,10 +8,7 @@ class Length{
         this.unitValue=value;
         this.lengthUnitType=lengthUnit;
     }
-    FeetToInch(){
-        return this.unitValue*this.lengthUnitType;
-    }
-    yardToInch(){
+    unitConversion(){
         return this.unitValue*this.lengthUnitType;
     }
     equalality(thatObj){

@@ -26,30 +26,30 @@ describe('tests for length conversion',function(){
     it('given 1 feet should return 12 inch',function(){
         oneFeet=new length.Length(1,length.LengthUnit.FEET);
         twelveInch=new length.Length(12,length.LengthUnit.INCH);
-        assert.equal(oneFeet.FeetToInch(),twelveInch.unitValue);
+        assert.equal(oneFeet.unitConversion(),twelveInch.unitValue);
     })
 
     it('given 1 feet compare with 1 inch should not equal',function(){
         oneFeet=new length.Length(1,length.LengthUnit.FEET);
         oneInch=new length.Length(1,length.LengthUnit.INCH);
-        assert.notEqual(oneFeet.FeetToInch(),oneInch.unitValue);
+        assert.notEqual(oneFeet.unitConversion(),oneInch.unitValue);
     })
 
     it('given 1 inch compare with 1 feet should not equal',function(){
         oneInch=new length.Length(1,length.LengthUnit.INCH);
         oneFeet=new length.Length(1,length.LengthUnit.FEET);
-        assert.notEqual(oneInch.unitValue,oneFeet.FeetToInch());
+        assert.notEqual(oneInch.unitValue,oneFeet.unitConversion());
     })
 
     it('given 12 inch compare with 1 feet should equal',function(){
         twelveInch=new length.Length(12,length.LengthUnit.INCH);
         oneFeet=new length.Length(1,length.LengthUnit.FEET);
-        assert.notEqual(oneInch.unitValue,oneFeet.FeetToInch());
+        assert.notEqual(oneInch.unitValue,oneFeet.unitConversion());
     })
 
     it('given 3 feet compare with 1 yard should equal',function(){
         threeFeet=new length.Length(3,length.LengthUnit.FEET);
         oneYard=new length.Length(1,length.LengthUnit.YARD);
-        assert.equal(oneYard.yardToInch(),threeFeet.FeetToInch());
+        assert.equal(oneYard.unitConversion(),threeFeet.unitConversion());
     })
 });
