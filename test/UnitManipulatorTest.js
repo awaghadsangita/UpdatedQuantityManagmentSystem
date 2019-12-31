@@ -151,7 +151,7 @@ describe("tests for addition of volume units",()=>{
     });
 });
 
-describe("tests for addition of weight units",()=>{
+describe("tests for comparision of weight units",()=>{
     it('given 1 kilogram and 1000 gram when compare should return true',()=>{
         oneKillogram=new unitManipulator(1,unit.weightUnit.KILOGRAM);
         thousandGram=new unitManipulator(1000,unit.weightUnit.GRAM);
