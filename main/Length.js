@@ -1,12 +1,15 @@
 const LengthUnit={
-    FEET:12
+    FEET:12,
+    INCH:1
 }
 class Length{
     constructor(value,lengthUnit){
         this.unitValue=value;
         this.lengthUnitType=lengthUnit;
     }
- 
+    FeetToInch(){
+        return this.unitValue*this.lengthUnitType;
+    }
     equalality(thatObj){
         if(thatObj===null){
             return false;

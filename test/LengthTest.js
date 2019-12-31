@@ -22,4 +22,10 @@ describe('tests for length conversion',function(){
         let object=new Object();
         assert.equal(false,zeroFeet.equalality(object));
     })
+
+    it('given 1 feet should return 12 inch',function(){
+        oneFeet=new length.Length(1,length.LengthUnit.FEET);
+        twelveInch=new length.Length(12,length.LengthUnit.INCH);
+        assert.equal(oneFeet.FeetToInch(),twelveInch.unitValue);
+    })
 });
