@@ -157,4 +157,10 @@ describe("tests for addition of weight units",()=>{
         thousandGram=new unitManipulator(1000,unit.weightUnit.GRAM);
         assert.equal(new unitManipulator().compare(oneKillogram,thousandGram),true);
     });
+
+    it('given 1 tonne and 1000 kilogram when compare should return true',()=>{
+        oneTonne=new unitManipulator(1,unit.weightUnit.TONNE);
+        thousandKilogram=new unitManipulator(1000,unit.weightUnit.KILOGRAM);
+        assert.equal(new unitManipulator().compare(oneTonne,thousandKilogram),true);
+    });
 });

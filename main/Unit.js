@@ -11,6 +11,7 @@ const volumeUnit={
     }
 const weightUnit={
     KILOGRAM:{value:1,name:'weight'},
-    GRAM:{value:0.001,name:'weight'}
+    GRAM:{value:0.001,name:'weight'},
+    TONNE:{value:1000,name:'weight'}
 }
 module.exports={lengthUnit,volumeUnit,weightUnit};
