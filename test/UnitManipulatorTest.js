@@ -111,7 +111,7 @@ describe('test for comparision', () => {
     });
 });
 
-describe("tests for addition of units",()=>{
+describe("tests for addition of length units",()=>{
     it('two inch should be added with two inch should return four inch',()=>{
         twoInch1=new unitManipulator(2,unit.lengthUnit.INCH);
         twoInch2=new unitManipulator(2,unit.lengthUnit.INCH);
