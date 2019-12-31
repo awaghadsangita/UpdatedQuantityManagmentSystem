@@ -5,9 +5,10 @@ class UnitManipulator{
     }
 
     compare(unitOne,unitTwo){
-        if(typeof unitOne.unitType==typeof unitTwo.unitType)
-            return unitOne.unitValue*unitOne.unitType==unitTwo.unitValue*unitTwo.unitType;
-        
+        if(unitOne.unitType.name==unitTwo.unitType.name)
+            return unitOne.unitValue*unitOne.unitType.value==unitTwo.unitValue*unitTwo.unitType.value;
+            
+        throw new Error('Invalid Unit Type');
     }
 
     equal(unitOne,unitTwo){
