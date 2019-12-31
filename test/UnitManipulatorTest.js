@@ -150,3 +150,11 @@ describe("tests for addition of volume units",()=>{
         assert.equal(new unitManipulator().add(oneLitre,thousandMilillitre),2);
     });
 });
+
+describe("tests for addition of weight units",()=>{
+    it('given 1 kilogram and 1000 gram when compare should return true',()=>{
+        oneKillogram=new unitManipulator(1,unit.weightUnit.KILOGRAM);
+        thousandGram=new unitManipulator(1000,unit.weightUnit.GRAM);
+        assert.equal(new unitManipulator().compare(oneKillogram,thousandGram),true);
+    });
+});

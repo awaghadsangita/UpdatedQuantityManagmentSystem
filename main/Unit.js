@@ -5,9 +5,12 @@ const lengthUnit={
         CENTIMETER:{value:0.393701,name:'length'}
        }
 const volumeUnit={
-        GALLON:{value:3.78,unitType:'volume'},
-        MILILITIRE:{value:0.001,unitType:'volume'},
-        LITRE:{value:1,unitType:'volume'}
+        GALLON:{value:3.78,name:'volume'},
+        MILILITIRE:{value:0.001,name:'volume'},
+        LITRE:{value:1,name:'volume'}
     }
-
-module.exports={lengthUnit,volumeUnit};
+const weightUnit={
+    KILOGRAM:{value:1,name:'weight'},
+    GRAM:{value:0.001,name:'weight'}
+}
+module.exports={lengthUnit,volumeUnit,weightUnit};
