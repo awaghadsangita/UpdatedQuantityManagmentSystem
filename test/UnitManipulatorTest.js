@@ -96,7 +96,7 @@ describe('test for comparision', () => {
             nullUnitType2 = new unitManipulator(1, null);
             new unitManipulator().compare(nullUnitType1, nullUnitType2);
         } catch (e) {
-            assert.equal(e.message, 'Invalid Unit Type');
+            assert.equal(e.message, 'Invalid Unit');
         }
     });
 
@@ -106,7 +106,7 @@ describe('test for comparision', () => {
             undefinedUnitType2 = new unitManipulator(1, undefined);
             new unitManipulator().compare(undefinedUnitType1, undefinedUnitType2);
         } catch (e) {
-            assert.equal(e.message, 'Invalid Unit Type');
+            assert.equal(e.message, 'Invalid Unit');
         }
     });
 });
@@ -172,5 +172,14 @@ describe("tests for addition of weight units",()=>{
         thousandGram=new unitManipulator(1000,unit.weightUnit.GRAM);
         assert.equal(new unitManipulator().add(oneTonne,thousandGram),1001);
     });
+});
 
+describe("tests for addition method",()=>{
+    it('null added with null should return throw error',()=>{
+        try{
+            new unitManipulator().add(null,null);
+        }catch(e){
+            assert.equal(e.message,"Invalid Unit");
+        }
+    });
 });

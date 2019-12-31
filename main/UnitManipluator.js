@@ -6,7 +6,7 @@ class UnitManipulator {
 
     compare(unitOne, unitTwo) {
         if (unitOne.unitType === null || unitTwo.unitType === null || unitOne.unitType === undefined || unitTwo.unitType === undefined)
-            throw new Error('Invalid Unit Type');
+            throw new Error('Invalid Unit');
 
         if (unitOne.unitType.name == unitTwo.unitType.name)
             return unitOne.unitValue * unitOne.unitType.value == unitTwo.unitValue * unitTwo.unitType.value;
@@ -15,6 +15,9 @@ class UnitManipulator {
     }
 
     add(unitOne, unitTwo) {
+        if (unitOne == null || unitTwo == null || unitOne.unitType === null || unitTwo.unitType === null || unitOne.unitType === undefined || unitTwo.unitType === undefined)
+            throw new Error('Invalid Unit');
+
         return (unitOne.unitValue * unitOne.unitType.value) + (unitTwo.unitValue * unitTwo.unitType.value);
     }
 
