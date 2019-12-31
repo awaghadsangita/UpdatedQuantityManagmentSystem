@@ -90,4 +90,10 @@ describe("tests for addition of units",()=>{
         twoInch=new length.Length(2,length.LengthUnit.INCH);
         assert.equal(4,twoInch.add(twoInch));
     })
+
+    it('two inch should be added with two inch should return four inch',()=>{
+        oneFeet=new length.Length(1,length.LengthUnit.FEET);
+        twoInch=new length.Length(2,length.LengthUnit.INCH);
+        assert.equal(14,oneFeet.add(twoInch));
+    })
 })

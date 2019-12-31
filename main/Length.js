@@ -14,7 +14,7 @@ class Length{
     }
 
     add(thatUnit){
-        return this.unitConversion()*thatUnit.unitConversion();
+        return this.unitConversion()+thatUnit.unitConversion();
     }
     equalality(thatObj){
         if(thatObj===null){
