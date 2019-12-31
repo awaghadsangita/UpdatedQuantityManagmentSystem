@@ -109,77 +109,85 @@ describe('test for comparision', () => {
             assert.equal(e.message, 'Invalid Unit');
         }
     });
+
+    it('given null and null when compare should return throw error', () => {
+        try {
+            new unitManipulator().compare(null, null);
+        } catch (e) {
+            assert.equal(e.message, "Invalid Unit");
+        }
+    });
 });
 
-describe("tests for addition of length units",()=>{
-    it('2 inch added with 2 inch should return 4 inch',()=>{
-        twoInch1=new unitManipulator(2,unit.lengthUnit.INCH);
-        twoInch2=new unitManipulator(2,unit.lengthUnit.INCH);
-        assert.equal(new unitManipulator().add(twoInch1,twoInch2),4);
+describe("tests for addition of length units", () => {
+    it('2 inch added with 2 inch should return 4 inch', () => {
+        twoInch1 = new unitManipulator(2, unit.lengthUnit.INCH);
+        twoInch2 = new unitManipulator(2, unit.lengthUnit.INCH);
+        assert.equal(new unitManipulator().add(twoInch1, twoInch2), 4);
     });
 
-    it('2 inch added with 2 inch should return 4 inch',()=>{
-        oneFeet=new unitManipulator(1,unit.lengthUnit.FEET);
-        twoInch=new unitManipulator(2,unit.lengthUnit.INCH);
-        assert.equal(new unitManipulator().add(oneFeet,twoInch),14);
+    it('2 inch added with 2 inch should return 4 inch', () => {
+        oneFeet = new unitManipulator(1, unit.lengthUnit.FEET);
+        twoInch = new unitManipulator(2, unit.lengthUnit.INCH);
+        assert.equal(new unitManipulator().add(oneFeet, twoInch), 14);
     });
 
-    it('1 feet added with 1 feet should return 24 inch',()=>{
-        oneFeet1=new unitManipulator(1,unit.lengthUnit.FEET);
-        oneFeet2=new unitManipulator(1,unit.lengthUnit.FEET);
-        assert.equal(new unitManipulator().add(oneFeet1,oneFeet2),24);
+    it('1 feet added with 1 feet should return 24 inch', () => {
+        oneFeet1 = new unitManipulator(1, unit.lengthUnit.FEET);
+        oneFeet2 = new unitManipulator(1, unit.lengthUnit.FEET);
+        assert.equal(new unitManipulator().add(oneFeet1, oneFeet2), 24);
     })
 
-    it('2 inch added with 2.5 centimeter should return 3 inch',()=>{
-        twoInch=new unitManipulator(2,unit.lengthUnit.INCH);
-        twoPointFiveCentimeter=new unitManipulator(2.5,unit.lengthUnit.CENTIMETER);
-        assert.equal(Math.round(new unitManipulator().add(twoInch,twoPointFiveCentimeter)),3);
+    it('2 inch added with 2.5 centimeter should return 3 inch', () => {
+        twoInch = new unitManipulator(2, unit.lengthUnit.INCH);
+        twoPointFiveCentimeter = new unitManipulator(2.5, unit.lengthUnit.CENTIMETER);
+        assert.equal(Math.round(new unitManipulator().add(twoInch, twoPointFiveCentimeter)), 3);
     })
 });
 
-describe("tests for addition of volume units",()=>{
-    it('1 gallon added with 3.78 liter should return 7.56 litre',()=>{
-        oneGallon=new unitManipulator(1,unit.volumeUnit.GALLON);
-        threePtSevenEightLitre=new unitManipulator(3.78,unit.volumeUnit.LITRE);
-        assert.equal(new unitManipulator().add(oneGallon,threePtSevenEightLitre),7.56);
+describe("tests for addition of volume units", () => {
+    it('1 gallon added with 3.78 liter should return 7.56 litre', () => {
+        oneGallon = new unitManipulator(1, unit.volumeUnit.GALLON);
+        threePtSevenEightLitre = new unitManipulator(3.78, unit.volumeUnit.LITRE);
+        assert.equal(new unitManipulator().add(oneGallon, threePtSevenEightLitre), 7.56);
     });
 
-    it('1 liter added with 1000 milillitre should return 2 litre',()=>{
-        oneLitre=new unitManipulator(1,unit.volumeUnit.LITRE);
-        thousandMilillitre=new unitManipulator(1000,unit.volumeUnit.MILILITIRE);
-        assert.equal(new unitManipulator().add(oneLitre,thousandMilillitre),2);
-    });
-});
-
-describe("tests for comparision of weight units",()=>{
-    it('given 1 kilogram and 1000 gram when compare should return true',()=>{
-        oneKillogram=new unitManipulator(1,unit.weightUnit.KILOGRAM);
-        thousandGram=new unitManipulator(1000,unit.weightUnit.GRAM);
-        assert.equal(new unitManipulator().compare(oneKillogram,thousandGram),true);
-    });
-
-    it('given 1 tonne and 1000 kilogram when compare should return true',()=>{
-        oneTonne=new unitManipulator(1,unit.weightUnit.TONNE);
-        thousandKilogram=new unitManipulator(1000,unit.weightUnit.KILOGRAM);
-        assert.equal(new unitManipulator().compare(oneTonne,thousandKilogram),true);
+    it('1 liter added with 1000 milillitre should return 2 litre', () => {
+        oneLitre = new unitManipulator(1, unit.volumeUnit.LITRE);
+        thousandMilillitre = new unitManipulator(1000, unit.volumeUnit.MILILITIRE);
+        assert.equal(new unitManipulator().add(oneLitre, thousandMilillitre), 2);
     });
 });
 
+describe("tests for comparision of weight units", () => {
+    it('given 1 kilogram and 1000 gram when compare should return true', () => {
+        oneKillogram = new unitManipulator(1, unit.weightUnit.KILOGRAM);
+        thousandGram = new unitManipulator(1000, unit.weightUnit.GRAM);
+        assert.equal(new unitManipulator().compare(oneKillogram, thousandGram), true);
+    });
 
-describe("tests for addition of weight units",()=>{
-    it('1 tonne added with 1000 gram should return 1001 kilogram',()=>{
-        oneTonne=new unitManipulator(1,unit.weightUnit.TONNE);
-        thousandGram=new unitManipulator(1000,unit.weightUnit.GRAM);
-        assert.equal(new unitManipulator().add(oneTonne,thousandGram),1001);
+    it('given 1 tonne and 1000 kilogram when compare should return true', () => {
+        oneTonne = new unitManipulator(1, unit.weightUnit.TONNE);
+        thousandKilogram = new unitManipulator(1000, unit.weightUnit.KILOGRAM);
+        assert.equal(new unitManipulator().compare(oneTonne, thousandKilogram), true);
     });
 });
 
-describe("tests for addition method",()=>{
-    it('null added with null should return throw error',()=>{
-        try{
-            new unitManipulator().add(null,null);
-        }catch(e){
-            assert.equal(e.message,"Invalid Unit");
+
+describe("tests for addition of weight units", () => {
+    it('1 tonne added with 1000 gram should return 1001 kilogram', () => {
+        oneTonne = new unitManipulator(1, unit.weightUnit.TONNE);
+        thousandGram = new unitManipulator(1000, unit.weightUnit.GRAM);
+        assert.equal(new unitManipulator().add(oneTonne, thousandGram), 1001);
+    });
+});
+
+describe("tests for addition method", () => {
+    it('null added with null should return throw error', () => {
+        try {
+            new unitManipulator().add(null, null);
+        } catch (e) {
+            assert.equal(e.message, "Invalid Unit");
         }
     });
 });

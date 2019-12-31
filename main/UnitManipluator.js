@@ -5,7 +5,7 @@ class UnitManipulator {
     }
 
     compare(unitOne, unitTwo) {
-        if (unitOne.unitType === null || unitTwo.unitType === null || unitOne.unitType === undefined || unitTwo.unitType === undefined)
+        if (unitOne == null || unitTwo == null || unitOne.unitType === null || unitTwo.unitType === null || unitOne.unitType === undefined || unitTwo.unitType === undefined)
             throw new Error('Invalid Unit');
 
         if (unitOne.unitType.name == unitTwo.unitType.name)
