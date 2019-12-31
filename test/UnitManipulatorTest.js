@@ -123,4 +123,10 @@ describe("tests for addition of units",()=>{
         twoInch=new unitManipulator(2,unit.lengthUnit.INCH);
         assert.equal(new unitManipulator().add(oneFeet,twoInch),14);
     });
+
+    it('one feet should be added with one feet should return 24 inch',()=>{
+        oneFeet1=new unitManipulator(1,unit.lengthUnit.FEET);
+        oneFeet2=new unitManipulator(1,unit.lengthUnit.FEET);
+        assert.equal(new unitManipulator().add(oneFeet1,oneFeet2),24);
+    })
 })
