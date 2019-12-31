@@ -1,6 +1,5 @@
 let assert = require('assert');
 let unit = require('../main/Unit');
-let volume = require('../main/Volume');
 let unitManipulator = require('../main/UnitManipluator');
 
 describe('tests for length conversion', () => {
@@ -186,6 +185,13 @@ describe("tests for addition method", () => {
     it('null added with null should return throw error', () => {
         try {
             new unitManipulator().add(null, null);
+        } catch (e) {
+            assert.equal(e.message, "Invalid Unit");
+        }
+    });
+    it('undefined added with undefined should return throw error', () => {
+        try {
+            new unitManipulator().add(undefined, undefined);
         } catch (e) {
             assert.equal(e.message, "Invalid Unit");
         }
