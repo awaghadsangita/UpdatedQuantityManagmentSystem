@@ -58,4 +58,11 @@ describe('tests for length conversion',function(){
         let oneYard=new length.Length(1,length.Length.YARD).unitConversion();
         assert.notEqual(oneYard,oneFeet);
     })
+
+    it('given 1 inch should not be equal 1 yard',function(){
+        let oneInch=new length.Length(1,length.Length.INCH).unitConversion();
+        let oneYard=new length.Length(1,length.Length.YARD).unitConversion();
+        assert.notEqual(oneYard,oneInch);
+    })
+
 });
