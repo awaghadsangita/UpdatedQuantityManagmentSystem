@@ -28,4 +28,10 @@ describe('tests for length conversion',function(){
         twelveInch=new length.Length(12,length.LengthUnit.INCH);
         assert.equal(oneFeet.FeetToInch(),twelveInch.unitValue);
     })
+
+    it('given 1 feet compare with 1 inch should not equal',function(){
+        oneFeet=new length.Length(1,length.LengthUnit.FEET);
+        oneInch=new length.Length(1,length.LengthUnit.INCH);
+        assert.notEqual(oneFeet.FeetToInch(),oneInch.unitValue);
+    })
 });
