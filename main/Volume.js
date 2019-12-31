@@ -1,5 +1,7 @@
 const volumeUnit={
-    GALLON:3.78
+    GALLON:3.78,
+    MILILITIRE:0.001,
+    LITRE:1
 }
 
 class Volume{

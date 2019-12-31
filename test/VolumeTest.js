@@ -7,4 +7,10 @@ describe('tests for volume conversion',()=>{
         assert.equal(3.78,oneGallon);
     });
 
+    it('given 1 litre should return 1000 ml',()=>{
+        let oneLitre=new volume.Volume(1,volume.volumeUnit.LITRE).unitConversion();
+        let thousandMl=new volume.Volume(1000,volume.volumeUnit.MILILITIRE).unitConversion();
+        assert.equal(thousandMl,oneLitre);
+    })
+
 });
