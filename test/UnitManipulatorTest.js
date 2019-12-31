@@ -143,4 +143,10 @@ describe("tests for addition of volume units",()=>{
         threePtSevenEightLitre=new unitManipulator(3.78,unit.volumeUnit.LITRE);
         assert.equal(new unitManipulator().add(oneGallon,threePtSevenEightLitre),7.56);
     });
+
+    it('1 liter added with 1000 milillitre should return 2 litre',()=>{
+        oneLitre=new unitManipulator(1,unit.volumeUnit.LITRE);
+        thousandMilillitre=new unitManipulator(1000,unit.volumeUnit.MILILITIRE);
+        assert.equal(new unitManipulator().add(oneLitre,thousandMilillitre),2);
+    });
 });
