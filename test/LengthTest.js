@@ -46,4 +46,10 @@ describe('tests for length conversion',function(){
         oneFeet=new length.Length(1,length.LengthUnit.FEET);
         assert.notEqual(oneInch.unitValue,oneFeet.FeetToInch());
     })
+
+    it('given 3 feet compare with 1 yard should equal',function(){
+        threeFeet=new length.Length(3,length.LengthUnit.FEET);
+        oneYard=new length.Length(1,length.LengthUnit.YARD);
+        assert.equal(oneYard.yardToInch(),threeFeet.FeetToInch());
+    })
 });

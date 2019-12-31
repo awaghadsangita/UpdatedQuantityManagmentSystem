@@ -1,6 +1,7 @@
 const LengthUnit={
     FEET:12,
-    INCH:1
+    INCH:1,
+    YARD:36
 }
 class Length{
     constructor(value,lengthUnit){
@@ -8,6 +9,9 @@ class Length{
         this.lengthUnitType=lengthUnit;
     }
     FeetToInch(){
+        return this.unitValue*this.lengthUnitType;
+    }
+    yardToInch(){
         return this.unitValue*this.lengthUnitType;
     }
     equalality(thatObj){
