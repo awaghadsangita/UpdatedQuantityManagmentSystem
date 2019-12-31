@@ -135,4 +135,12 @@ describe("tests for addition of length units",()=>{
         twoPointFiveCentimeter=new unitManipulator(2.5,unit.lengthUnit.CENTIMETER);
         assert.equal(Math.round(new unitManipulator().add(twoInch,twoPointFiveCentimeter)),3);
     })
-})
+});
+
+describe("tests for addition of volume units",()=>{
+    it('1 gallon added with 3.78 liter should return 7.56 litre',()=>{
+        oneGallon=new unitManipulator(1,unit.volumeUnit.GALLON);
+        threePtSevenEightLitre=new unitManipulator(3.78,unit.volumeUnit.LITRE);
+        assert.equal(new unitManipulator().add(oneGallon,threePtSevenEightLitre),7.56);
+    });
+});
