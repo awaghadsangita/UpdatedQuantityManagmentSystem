@@ -189,11 +189,22 @@ describe("tests for addition method", () => {
             assert.equal(e.message, "Invalid Unit");
         }
     });
+
     it('undefined added with undefined should return throw error', () => {
         try {
             new unitManipulator().add(undefined, undefined);
         } catch (e) {
             assert.equal(e.message, "Invalid Unit");
+        }
+    });
+
+    it('given undefined as unit type ,two objects when added should throw error', () => {
+        try {
+            undefinedUnitType1 = new unitManipulator(1, undefined);
+            undefinedUnitType2 = new unitManipulator(1, undefined);
+            new unitManipulator().add(undefinedUnitType1, undefinedUnitType2);
+        } catch (e) {
+            assert.equal(e.message, 'Invalid Unit');
         }
     });
 });
