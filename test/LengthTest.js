@@ -82,11 +82,12 @@ describe('tests for length conversion',function(){
         oneYard=new length.Length(1,length.LengthUnit.YARD);
         assert.equal(true,oneYard.equalality(oneYard));
     })
+});
 
-    it('two inch should be added with two inch should return four inch',function(){
+describe("tests for addition of units",()=>{
+    it('two inch should be added with two inch should return four inch',()=>{
         twoInch=new length.Length(2,length.LengthUnit.INCH);
         twoInch=new length.Length(2,length.LengthUnit.INCH);
         assert.equal(4,twoInch.add(twoInch));
     })
-    
-});
+})
