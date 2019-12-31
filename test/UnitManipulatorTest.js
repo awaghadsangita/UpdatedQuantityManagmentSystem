@@ -164,3 +164,13 @@ describe("tests for comparision of weight units",()=>{
         assert.equal(new unitManipulator().compare(oneTonne,thousandKilogram),true);
     });
 });
+
+
+describe("tests for addition of weight units",()=>{
+    it('1 tonne added with 1000 gram should return 1001 kilogram',()=>{
+        oneTonne=new unitManipulator(1,unit.weightUnit.TONNE);
+        thousandGram=new unitManipulator(1000,unit.weightUnit.GRAM);
+        assert.equal(new unitManipulator().add(oneTonne,thousandGram),1001);
+    });
+
+});
