@@ -14,4 +14,8 @@ const weightUnit={
     GRAM:{value:0.001,name:'weight'},
     TONNE:{value:1000,name:'weight'}
 }
-module.exports={lengthUnit,volumeUnit,weightUnit};
+const temparatureUnit={
+    FAHRENHEIT:{value:'fahrenheit'},
+    CELSIUS:{value:'celsius'}
+}
+module.exports={lengthUnit,volumeUnit,weightUnit,temparatureUnit};
