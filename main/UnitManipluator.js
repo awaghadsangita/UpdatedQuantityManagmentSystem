@@ -11,18 +11,18 @@ class UnitManipulator {
 
         if (unitOne.unitType == unit.temparatureUnit.FAHRENHEIT)
             return Math.round((unitOne.unitValue - 32) * (5 / 9)) == unitTwo.unitValue
-        
+
         if (unitOne.unitType == unit.temparatureUnit.CELSIUS)
             return Math.round((unitOne.unitValue * (9 / 5)) + 32) == unitTwo.unitValue
-        
-        if (unitOne.unitType.name == unitTwo.unitType.name)
+
+        if (unitOne.unitType.type == unitTwo.unitType.type)
             return unitOne.unitValue * unitOne.unitType.value == unitTwo.unitValue * unitTwo.unitType.value;
 
         throw new Error('Invalid Unit Type');
     }
 
     add(unitOne, unitTwo) {
-        if (unitOne == null || unitTwo == null || unitOne == undefined || unitTwo == undefined || unitOne.unitType === null || unitTwo.unitType === null || unitOne.unitType === undefined || unitTwo.unitType === undefined)
+        if (unitOne == null || unitTwo == null || unitOne == undefined || unitTwo == undefined || unitOne.unitType === null || unitTwo.unitType === null || unitOne.unitType === undefined || unitTwo.unitType === undefined || unitOne.unitType.type != unitTwo.unitType.type)
             throw new Error('Invalid Unit');
 
         return (unitOne.unitValue * unitOne.unitType.value) + (unitTwo.unitValue * unitTwo.unitType.value);

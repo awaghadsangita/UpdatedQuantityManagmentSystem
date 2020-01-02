@@ -1,21 +1,26 @@
 const lengthUnit={
-        FEET:{value:12,name:'length'},
-        INCH:{value:1,name:'length'},
-        YARD:{value:36,name:'length'},
-        CENTIMETER:{value:0.393701,name:'length'}
+        FEET:{value:12,type:'length'},
+        INCH:{value:1,type:'length'},
+        YARD:{value:36,type:'length'},
+        CENTIMETER:{value:0.393701,type:'length'}
        }
 const volumeUnit={
-        GALLON:{value:3.78,name:'volume'},
-        MILILITIRE:{value:0.001,name:'volume'},
-        LITRE:{value:1,name:'volume'}
+        GALLON:{value:3.78,type:'volume'},
+        MILILITIRE:{value:0.001,type:'volume'},
+        LITRE:{value:1,type:'volume'}
     }
 const weightUnit={
-    KILOGRAM:{value:1,name:'weight'},
-    GRAM:{value:0.001,name:'weight'},
-    TONNE:{value:1000,name:'weight'}
+    KILOGRAM:{value:1,type:'weight'},
+    GRAM:{value:0.001,type:'weight'},
+    TONNE:{value:1000,type:'weight'}
 }
 const temparatureUnit={
     FAHRENHEIT:{value:'fahrenheit'},
     CELSIUS:{value:'celsius'}
 }
-module.exports={lengthUnit,volumeUnit,weightUnit,temparatureUnit};
+module.exports={
+    lengthUnit,
+    volumeUnit,
+    weightUnit,
+    temparatureUnit
+};
