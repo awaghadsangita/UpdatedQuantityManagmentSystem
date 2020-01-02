@@ -218,3 +218,11 @@ describe("tests for addition method", () => {
         }
     });
 });
+
+describe("tests for comparision of temperature units", () => {
+    it('given 212 Fahrenheit and 100 Celcius when compare should return true', () => {
+        fahrenheit212 = new unitManipulator(212, unit.temparatureUnit.FAHRENHEIT);
+        hundredCelcius = new unitManipulator(100, unit.temparatureUnit.CELSIUS);
+        assert.equal(new unitManipulator().compare(fahrenheit212, hundredCelcius), true);
+    });
+});
